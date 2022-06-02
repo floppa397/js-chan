@@ -1,0 +1,35 @@
+{
+    "name": "js-chan",
+    "version": "1.0.0",
+    "description": "proof of concept",
+    "main": "index.js",
+    "scripts": {
+        "build-dev": "webpack --config webpack.dev.js",
+        "build-prod": "webpack --config webpack.prod.js",
+        "check-types": "tsc --noEmit",
+        "http-server": "http-server dist",
+        "run-in-dev-browser": "http-server dist --port 8080 & chromium --user-data-dir=/tmp/temporary-chrome-profile-dir --disable-web-security http://localhost:8080 && fg",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@emotion/react": "^11.9.0",
+        "@emotion/styled": "^11.8.1",
+        "@mui/icons-material": "^5.8.2",
+        "@mui/material": "^5.8.2",
+        "react": "^18.1.0",
+        "react-dom": "^18.1.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.10",
+        "@types/react-dom": "^18.0.5",
+        "html-webpack-plugin": "^5.5.0",
+        "http-server": "^14.1.1",
+        "ts-loader": "^9.3.0",
+        "typescript": "^4.7.2",
+        "webpack": "^5.72.1",
+        "webpack-cli": "^4.9.2",
+        "webpack-merge": "^5.8.0"
+    }
+}
