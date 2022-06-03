@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.footer-row {
+    margin-top: -10px !important;
+    margin-bottom: 0;
+}
+
+.footer-col {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.tabs .indicator {
+    height: 5px;
+    background-color: #fff;
+}
+
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.icon svg {
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+}

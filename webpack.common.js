@@ -5,8 +5,6 @@ module.exports = {
     entry: "./src/index.tsx",
     output: {
         path: path.resolve(__dirname, "./dist"),
-        filename: "[name].bundle.js",
-        chunkFilename: "[name].chunk-bundle.js",
         clean: true,
     },
     resolve: {
@@ -18,6 +16,15 @@ module.exports = {
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
                 use: {loader: "ts-loader"},
+            },
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
+            {
+                // @see https://webpack.js.org/guides/asset-modules/
+                resourceQuery: /resource/,
+                type: "asset/resource",
             },
         ]
     },
