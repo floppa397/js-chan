@@ -23,15 +23,28 @@ main {
     background-color: #fff;
 }
 
+.sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
 .sticky-footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 10;
+    background: white;
 }
 
 .icon svg {
     fill: currentColor;
     width: 1em;
     height: 1em;
+}
+
+/* @see https://github.com/chakra-ui/chakra-ui/issues/708#issuecomment-638963019*/
+*:focus {
+    box-shadow: none !important;
 }
